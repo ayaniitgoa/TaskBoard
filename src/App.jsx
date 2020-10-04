@@ -10,10 +10,11 @@ import {
 import { Provider } from 'react-redux';
 import LoginPage from './containers/LoginPage/LoginPage';
 import Register from './containers/Register/Register';
+import store from './reduxSetup/store';
 
 function App() {
   return (
-    <Provider>
+    <Provider store={store}>
       <Router>
         <div className='App'>
           <Switch>

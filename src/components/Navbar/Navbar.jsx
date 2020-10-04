@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import axios from 'axios';
+import { connect } from 'react-redux';
+import { fetchProfileImg } from '../../reduxSetup/actions/profileImgActions';
 
 import './Navbar.css';
 
@@ -19,24 +20,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Navbar() {
+function Navbar(props) {
   const classes = useStyles();
 
-  const [profileImg, setProfileImg] = useState('');
-
   useEffect(() => {
-    const img_number = Math.floor(Math.random() * 1000);
-    axios
-      .get(`https://picsum.photos/id/${img_number}/info`)
-      .then((res) => {
-        console.log(res.data.download_url);
-        setProfileImg(res.data.download_url);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-
-    return () => {};
+    props.fetchProfileImg();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -46,12 +35,21 @@ function Navbar() {
           <Typography variant='h6' className={classes.title}>
             TasksBoard
           </Typography>
-
-          <img src={profileImg} alt='Profile' className='profile-image' />
+          {props.imgData && (
+            <img
+              src={props.imgData.download_url}
+              alt='Profile'
+              className='profile-image'
+            />
+          )}
         </Toolbar>
       </AppBar>
     </div>
   );
 }
 
-export default Navbar;
+const mapStateToProps = (state) => ({
+  imgData: state.profileImg.imgData,
+});
+
+export default connect(mapStateToProps, { fetchProfileImg })(Navbar);

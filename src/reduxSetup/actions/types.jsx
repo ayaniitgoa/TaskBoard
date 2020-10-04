@@ -1,0 +1,1 @@
+export const FETCH_PROFILE_IMG = 'FETCH_PROFILE_IMG';
