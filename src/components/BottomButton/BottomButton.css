@@ -14,8 +14,12 @@
 }
 
 .modal-body {
-  height: 10vh;
+  height: 8vh;
+}
+
+.addlist-form {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 

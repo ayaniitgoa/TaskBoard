@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import Checkbox from '@material-ui/core/Checkbox';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import { Helmet } from 'react-helmet';
 
 import './Register.css';
 
@@ -84,6 +85,10 @@ function Register(props) {
 
   return (
     <>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Sign Up</title>
+      </Helmet>
       <div className='register-container'>
         <h1 className='registerHeader'>Sign In!</h1>
         <form

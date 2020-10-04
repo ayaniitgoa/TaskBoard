@@ -18,13 +18,14 @@ function App() {
       <Router>
         <div className='App'>
           <Switch>
+            {localStorage.getItem('')}
             <Route component={HomePage} exact path='/' />
-            <Route component={LoginPage} exact path='/login' />
             {localStorage.getItem('userData') !== null ? (
               <Redirect to='/login' />
             ) : (
               <Route component={Register} exact path='/register' />
             )}
+            <Route component={LoginPage} exact path='/login' />
           </Switch>
         </div>
       </Router>

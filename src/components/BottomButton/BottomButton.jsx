@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
+import TextField from '@material-ui/core/TextField';
 import './BottomButton.css';
+import { connect } from 'react-redux';
+import { makeNewList } from '../../reduxSetup/actions/newListActions';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,8 +18,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function BottomButton() {
+function BottomButton(props) {
   const classes = useStyles();
+
+  const [listName, setListName] = useState('New List');
+
+  const handleNewListSubmit = (e) => {
+    e.preventDefault();
+    props.makeNewList({ title: listName, alltasks: [] });
+  };
 
   return (
     <div className={classes.root}>
@@ -40,17 +50,33 @@ function BottomButton() {
       >
         <div className='modal-dialog modal-dialog-centered'>
           <div className='modal-content rounded-0'>
-            <div className='modal-body'>New List</div>
-            <Fab
-              style={{
-                backgroundColor: '#0d47a1',
-              }}
-              aria-label='addTask'
-              className='add-list-btn'
-              size='small'
-            >
-              <AddIcon />
-            </Fab>
+            <div className='modal-body'>
+              <form
+                autoComplete='off'
+                noValidate
+                className='addlist-form'
+                onSubmit={handleNewListSubmit}
+              >
+                <TextField
+                  id='filled-basic'
+                  value={listName}
+                  onChange={(e) => {
+                    setListName(e.target.value);
+                  }}
+                />
+                <Fab
+                  style={{
+                    backgroundColor: '#0d47a1',
+                  }}
+                  aria-label='addTask'
+                  className='add-list-btn'
+                  size='small'
+                  type='submit'
+                >
+                  <AddIcon />
+                </Fab>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -58,4 +84,4 @@ function BottomButton() {
   );
 }
 
-export default BottomButton;
+export default connect(null, { makeNewList })(BottomButton);

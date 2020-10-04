@@ -1,0 +1,4 @@
+.all-lists {
+  display: flex !important;
+  flex-wrap: wrap;
+}

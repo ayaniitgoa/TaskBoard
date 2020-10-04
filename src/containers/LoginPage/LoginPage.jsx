@@ -6,6 +6,7 @@ import { withStyles, makeStyles } from '@material-ui/core/styles';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
+import { Helmet } from 'react-helmet';
 import './LoginPage.css';
 
 const CssTextField = withStyles({
@@ -65,10 +66,12 @@ function LoginPage(props) {
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     console.log(email, password);
-    if (email === localData[1] && password === localData[2]) {
-      props.history.push('/');
-    } else {
-      console.log(email, localData[1], password, localData[2]);
+    if (localData) {
+      if (email === localData[1] && password === localData[2]) {
+        props.history.push('/');
+      } else {
+        console.log(email, localData[1], password, localData[2]);
+      }
     }
   };
 
@@ -84,12 +87,18 @@ function LoginPage(props) {
     const data = JSON.parse(localStorage.getItem('userData'));
     setLocalData(data);
     console.log(data);
-    setEmail(data[1]);
-    setPassword(data[2]);
+    if (data) {
+      setEmail(data[1]);
+      setPassword(data[2]);
+    }
   }, []);
 
   return (
     <>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Login</title>
+      </Helmet>
       <div className='login-container'>
         <h1 className='loginHeader'>Log In!</h1>
         <form
