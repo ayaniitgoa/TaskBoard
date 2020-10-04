@@ -1,0 +1,25 @@
+.register-container {
+  height: 100vh;
+  background: #0637a1;
+  color: white;
+}
+
+.registerHeader {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  position: relative;
+  top: 10rem;
+}
+
+.register-input {
+  margin-bottom: 1rem !important;
+  width: 30vw;
+}
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13rem;
+}

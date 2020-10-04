@@ -20,9 +20,40 @@ function BottomButton() {
 
   return (
     <div className={classes.root}>
-      <Fab backgroundColor='#0d47a1' aria-label='add' className='bottom-btn'>
+      <Fab
+        style={{
+          backgroundColor: '#0d47a1',
+        }}
+        aria-label='add'
+        className='bottom-btn'
+        data-toggle='modal'
+        data-target='#addNewList'
+      >
         <AddIcon />
       </Fab>
+
+      <div
+        className='modal fade'
+        id='addNewList'
+        aria-labelledby='exampleModalLabel'
+        aria-hidden='true'
+      >
+        <div className='modal-dialog modal-dialog-centered'>
+          <div className='modal-content rounded-0'>
+            <div className='modal-body'>New List</div>
+            <Fab
+              style={{
+                backgroundColor: '#0d47a1',
+              }}
+              aria-label='addTask'
+              className='add-list-btn'
+              size='small'
+            >
+              <AddIcon />
+            </Fab>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

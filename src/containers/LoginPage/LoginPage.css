@@ -1,5 +1,44 @@
 .login-container {
-  height: 100vh;
-  background-color: #0d47a1;
+  min-height: 100vh;
+  background: #0637a1;
   color: white;
+  min-width: 100vw;
+}
+
+.loginHeader {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  position: relative;
+  top: 10rem;
+}
+
+.login-input {
+  margin-bottom: 1rem !important;
+  width: 26rem;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13rem;
+}
+
+.login-last-line {
+  display: flex;
+  flex-wrap: wrap;
+}
+a {
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  padding: 0 !important;
+  width: fit-content !important;
+}
+
+.forgot-pass {
+  position: relative;
+  right: 0;
+  top: 8px;
 }
