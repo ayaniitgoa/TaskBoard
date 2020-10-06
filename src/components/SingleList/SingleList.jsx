@@ -41,9 +41,9 @@ function SingleList(props) {
   const [selectedDate, setSelectedDate] = useState(
     new Date('2020-10-18T21:11:54')
   );
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-  };
+  // const handleDateChange = (date) => {
+  //   setSelectedDate(date);
+  // };
   const handleAddTaskSubmit = (e) => {
     e.preventDefault();
     props.addTaskToList({
