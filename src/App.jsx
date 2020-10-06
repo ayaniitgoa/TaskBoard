@@ -1,12 +1,7 @@
 import React from 'react';
 import './App.css';
 import HomePage from './containers/HomePage/HomePage';
-import {
-  HashRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import LoginPage from './containers/LoginPage/LoginPage';
 import Register from './containers/Register/Register';
