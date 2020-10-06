@@ -3,9 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 import TextField from '@material-ui/core/TextField';
-import './BottomButton.css';
 import { connect } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { makeNewList } from '../../reduxSetup/actions/newListActions';
+import './BottomButton.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,11 +26,11 @@ function BottomButton(props) {
 
   const handleNewListSubmit = (e) => {
     e.preventDefault();
-    props.makeNewList({ title: listName, alltasks: [] });
+    props.makeNewList({ id: uuidv4(), title: listName, alltasks: [] });
   };
 
   return (
-    <div className={classes.root}>
+    <div className={'bottom-btn-modal-btn ' + classes.root}>
       <Fab
         style={{
           backgroundColor: '#0d47a1',

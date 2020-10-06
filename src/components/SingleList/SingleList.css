@@ -1,0 +1,74 @@
+.single-list {
+  border: 2px solid green;
+}
+
+.card-add-task-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-add-task-text {
+  margin-left: 20px;
+}
+
+.button-threedots {
+  background: none;
+  border: none;
+}
+
+.card-top-part {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.one-list-all-tasks {
+  position: relative;
+  left: -10px;
+  display: flex;
+  flex-direction: row;
+  color: #0d47a1;
+}
+
+.task-title {
+  position: relative;
+  top: 16px;
+}
+
+.number-of-completed-task-text {
+  color: #4caf50;
+}
+
+.update-btn-single-task {
+  position: absolute;
+  top: 23px;
+  left: 17em;
+  cursor: pointer;
+}
+
+.trash-btn-task {
+  position: relative;
+  top: 10px;
+}
+
+.task-description {
+  color: #0d47a1;
+  margin-top: -10px;
+  margin-left: 50px;
+}
+
+.task-date {
+  color: #0d47a1;
+  margin-top: 0px;
+  margin-left: 50px;
+  font-size: 12px;
+  background-color: #eceff3;
+  width: fit-content;
+  padding: 7px 12px;
+  font-weight: bold;
+}
+
+.modal2 {
+  height: 60vh;
+}

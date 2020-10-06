@@ -2,3 +2,10 @@
   display: flex !important;
   flex-wrap: wrap;
 }
+
+.custom-alllists-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+}

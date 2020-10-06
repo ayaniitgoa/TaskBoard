@@ -35,12 +35,14 @@ function Navbar(props) {
           <Typography variant='h6' className={classes.title}>
             TasksBoard
           </Typography>
-          {props.imgData && (
+          {props.imgData.download_url ? (
             <img
               src={props.imgData.download_url}
               alt='Profile'
               className='profile-image'
             />
+          ) : (
+            <p>Loading..</p>
           )}
         </Toolbar>
       </AppBar>

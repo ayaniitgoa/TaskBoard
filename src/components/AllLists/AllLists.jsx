@@ -4,10 +4,15 @@ import './AllLists.css';
 import SingleList from '../SingleList/SingleList';
 function Lists(props) {
   return (
-    <div className='all-lists'>
+    <div className='all-lists custom-alllists-container'>
       {props.allLists.map((list, key) => {
         return (
-          <div key={key}>
+          <div
+            key={key}
+            // onClick={() => {
+            //   console.log(list.id);
+            // }}
+          >
             <SingleList list={list} />
           </div>
         );

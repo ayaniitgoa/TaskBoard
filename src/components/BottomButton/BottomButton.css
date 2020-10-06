@@ -1,12 +1,12 @@
 .bottom-btn {
   color: #ffffff !important;
   background-color: #0d47a1 !important;
-  position: absolute !important;
+  position: fixed !important;
   bottom: 20px !important;
   right: 20px !important;
 }
 
-.modal-content {
+/* .modal-content {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -14,8 +14,8 @@
 }
 
 .modal-body {
-  height: 8vh;
-}
+  height: 9vh;
+} */
 
 .addlist-form {
   display: flex;
@@ -26,6 +26,6 @@
 .add-list-btn {
   color: #ffffff !important;
   position: absolute;
-  right: 2rem !important;
+  /* right: 1rem !important; */
   background-color: #0d47a1 !important;
 }

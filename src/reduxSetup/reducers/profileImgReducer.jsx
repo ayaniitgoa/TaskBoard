@@ -2,6 +2,7 @@ import { FETCH_PROFILE_IMG } from '../actions/types';
 
 const initialState = {
   imgData: {},
+  loading: true,
 };
 
 export default function (state = initialState, action) {
@@ -10,7 +11,9 @@ export default function (state = initialState, action) {
       return {
         ...state,
         imgData: action.payload,
+        loading: false,
       };
+
     default:
       return state;
   }
