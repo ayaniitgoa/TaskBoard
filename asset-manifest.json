@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/TaskBoard/static/css/main.db5fb6c9.chunk.css",
+    "main.js": "/TaskBoard/static/js/main.62f72451.chunk.js",
+    "main.js.map": "/TaskBoard/static/js/main.62f72451.chunk.js.map",
+    "runtime-main.js": "/TaskBoard/static/js/runtime-main.f73694fe.js",
+    "runtime-main.js.map": "/TaskBoard/static/js/runtime-main.f73694fe.js.map",
+    "static/js/2.b7504d41.chunk.js": "/TaskBoard/static/js/2.b7504d41.chunk.js",
+    "static/js/2.b7504d41.chunk.js.map": "/TaskBoard/static/js/2.b7504d41.chunk.js.map",
+    "index.html": "/TaskBoard/index.html",
+    "precache-manifest.aa25a47bf16f2827e44ed46d10368f9a.js": "/TaskBoard/precache-manifest.aa25a47bf16f2827e44ed46d10368f9a.js",
+    "service-worker.js": "/TaskBoard/service-worker.js",
+    "static/css/main.db5fb6c9.chunk.css.map": "/TaskBoard/static/css/main.db5fb6c9.chunk.css.map",
+    "static/js/2.b7504d41.chunk.js.LICENSE.txt": "/TaskBoard/static/js/2.b7504d41.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f73694fe.js",
+    "static/js/2.b7504d41.chunk.js",
+    "static/css/main.db5fb6c9.chunk.css",
+    "static/js/main.62f72451.chunk.js"
+  ]
+}
