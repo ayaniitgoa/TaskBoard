@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import HomePage from './containers/HomePage/HomePage';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Switch,
   Redirect,
@@ -21,13 +21,10 @@ function App() {
         <Router>
           <div className='App'>
             <Switch>
-              {localStorage.getItem('')}
               <Route component={HomePage} exact path='/' />
-              {localStorage.getItem('userData') !== null ? (
-                <Redirect to='/login' />
-              ) : (
-                <Route component={Register} exact path='/register' />
-              )}
+
+              <Route component={Register} exact path='/register' />
+
               <Route component={LoginPage} exact path='/login' />
             </Switch>
           </div>

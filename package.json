@@ -1,5 +1,5 @@
 {
-  "homepage": "http://ayaniitgoa.github.io/TaskBoard",
+  "homepage": ".",
   "name": "fintech",
   "version": "0.1.0",
   "private": true,
@@ -25,8 +25,6 @@
     "uuid": "^8.3.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -47,5 +45,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
 }
